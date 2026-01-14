@@ -1,0 +1,414 @@
+/* ==================== Activities Section ==================== */
+.activities-section {
+  padding: 4rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 0;
+  margin-bottom: 2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.activities-tag {
+  display: inline-block;
+  background: #000000;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  box-shadow: none;
+}
+
+/* ==================== Activities Container ==================== */
+.activities-container {
+  width: 100%;
+}
+
+.activities-container > h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+/* ==================== Activities Content ==================== */
+.activities-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+/* ==================== Activity Item ==================== */
+.activity-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: stretch;
+  transition: all 0.3s ease;
+  background: white;
+  border-radius: 0;
+  padding: 2rem 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.activity-item:nth-child(even) {
+  grid-template-columns: 1fr;
+}
+
+.activity-item:nth-child(even) .activity-text {
+  order: unset;
+}
+
+.activity-item:nth-child(even) .activity-images {
+  order: -1;
+}
+
+/* ==================== Activity Text ==================== */
+.activity-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+  background: transparent;
+}
+
+.activity-number {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0.8rem;
+}
+
+.activity-text h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.3rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.activity-period {
+  font-size: 0.95rem;
+  color: #808080;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0;
+}
+
+.activity-text ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.activity-text li {
+  font-size: 1rem;
+  color: #333333;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.activity-text li:before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* ==================== Activity Images ==================== */
+.activity-org {
+  font-size: 0.9rem;
+  color: #808080;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.activity-description {
+  font-size: 0.95rem;
+  color: #333333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* ==================== Activity Images ==================== */
+.activity-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  align-items: stretch;
+  order: -1;
+}
+
+.activity-images.single {
+  grid-template-columns: 1fr;
+}
+
+.activity-images.fundraising {
+  grid-template-columns: 1fr;
+}
+
+.activity-images.fundraising .activity-image {
+  aspect-ratio: 3 / 2;
+}
+
+.activity-images.fundraising-single {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 350px;
+}
+
+.activity-images.fundraising-single .activity-image {
+  aspect-ratio: 1 / 1;
+}
+
+.activity-image {
+
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  min-width: unset;
+  min-height: unset;
+  max-width: 100%;
+  max-height: unset;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  border: 1px solid #e5e5e5;
+}
+
+.activity-image:hover {
+  transform: none;
+  box-shadow: none;
+  opacity: 0.95;
+}
+
+
+/* ==================== Responsive ==================== */
+@media (max-width: 768px) {
+  .activity-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .activity-item:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-item:nth-child(even) .activity-text {
+    order: 1;
+  }
+
+  .activity-item:nth-child(even) .activity-images {
+    order: 2;
+  }
+
+  .activity-images {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .activities-container > h1 {
+    font-size: 2rem;
+  }
+
+  .activity-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .activity-number {
+    font-size: 2rem;
+  }
+}
+
+/* ==================== Awards Section ==================== */
+.awards-content {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.award-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 2rem;
+}
+
+.award-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.award-text h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.3rem;
+  color: #000000;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.award-period {
+  font-size: 0.9rem;
+  color: #808080;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  letter-spacing: 0;
+}
+
+.award-description {
+  font-size: 0.95rem;
+  color: #333333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.award-text ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.award-text li {
+  font-size: 0.95rem;
+  color: #333333;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.award-text li:before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #000000;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/* ==================== Award Images ==================== */
+.award-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.award-image {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 400;
+  font-size: 1rem;
+  box-shadow: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  border: 1px solid #e5e5e5;
+}
+
+.award-image:hover {
+  transform: translateY(-8px) scale(1.02);
+  opacity: 0.95
+}
+
+@media (max-width: 768px) {
+  .award-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .award-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .award-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+;
+
+
+.contact {
+    background: url("paper.jpg"); /* если нет картинки — удали строку */
+    background-color: #ffffff;
+    padding: 4rem 5%;
+    border-top: 1px solid #e5e5e5;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title {
+    background: #000000;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    border-radius: 0;
+    width: fit-content;
+    margin: 0 auto 2rem auto;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.item h4 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333333;
+    margin-bottom: 0.5rem;
+}
+
+.item p {
+    font-size: 0.95rem;
+    color: #666666
+}
